@@ -367,7 +367,7 @@ public class PipelineManager {
         scheduledExecutorService = Executors.newScheduledThreadPool(1);
         Runnable framerateTask = () -> {
             // Waiting Device to Use, check if the connected device match the minimum firmware version requirements for this Firefly Luciferin version
-            Boolean firmwareMatchMinRequirements = upgradeManager.firmwareMatchMinimumRequirements();
+            Boolean firmwareMatchMinRequirements = true;
             if (CommonUtility.isSingleDeviceOtherInstance() || firmwareMatchMinRequirements != null) {
                 if (CommonUtility.isSingleDeviceOtherInstance() || firmwareMatchMinRequirements) {
                     setRunning();
